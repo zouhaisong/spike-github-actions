@@ -1,4 +1,5 @@
 name: "CD Pipeline"
+
 on: 
   push:
     branches:
@@ -11,6 +12,7 @@ on:
         description: 'Optional message to pass to the workflow'
         required: false
         default: 'No custom message provided'
+
 jobs:
   lint:
     name: "Lint"
