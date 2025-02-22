@@ -7,6 +7,12 @@ on:
       - develop
     tags:
       - v*
+  workflow_dispatch:
+    inputs:
+      message:
+        description: 'Optional message to pass to the workflow'
+        required: false
+        default: 'No custom message provided'
 
 jobs:
   lint:
