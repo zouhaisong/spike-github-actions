@@ -12,9 +12,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: echo "Unit test" 
+  fat:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "fat" 
   build: 
     runs-on: ubuntu-latest
-    needs: [lint, format, unit-test]
+    needs: [lint, format, unit-test, fat]
     steps:
     - run: pwd
     - run: date
