@@ -28,7 +28,6 @@ jobs:
     needs: [build, sit]
     steps:
     - run: echo "e2e-test"
-  
   deploy-uat: 
     runs-on: ubuntu-latest
     needs: [e2e-test]
@@ -36,7 +35,7 @@ jobs:
     - run: echo "deploy-uat"
   uat: 
     runs-on: ubuntu-latest
-    needs: [e2e-test]
+    needs: [deploy-uat]
     steps:
     - run: echo "uat"
 
